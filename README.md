@@ -40,14 +40,17 @@
 为了探究为什么 [getch-linux](getch-linux.c) 中方向键、回车键等获取的值是多个而且均与 [getch-win](getch-win.c)中的不同，用[getchar](getchar.c)试了一下发现方向键输入的时候真的是一次输入了三个字符，而且其中前两个是一样的，第三个则和大写字母一样。。。也就是说用这两函数分辨这几个按键有点头大。
 
 从输出中还可以得到的结果有 getchar 连回车的值也获取到了，这也印证了每个输出都会莫名其妙多出了
-```c
-You input is:
- <-> 10
-```
+  ```c
+  You input is:
+  <-> 10
+  ```
 
 ### 程序
 - [v2-1](v2-1.c):现在知道了获取输入不用回车的办法，就可以写一个上下选择的菜单了
-
+- [v2-2](v2-2.c)：给菜单加上颜色
+  - [VT控制码. Engineer-Bruce_Yang 2016-02-21](https://blog.csdn.net/morixinguan/article/details/50710083)：很好的解释，但是看了不会用
+  - [linux下控制台颜色输出. HES_C 2017-05-11](https://blog.csdn.net/HES_C/article/details/71600471):给出了一个 printf 案例，一下子就知道咋用了
+  
 # 参考
 - [C语言实现一个Window控制台带彩色，且可以用方向键选择并确认的菜单式列表(一)Engineer-Bruce_Yang 2017-08-22](https://yangyuanxin.blog.csdn.net/article/details/77485367)：这就是我想要的效果，看起来极像 GUI,但实际不是， IDF 中也有类似的菜单
   > 比如Linux内核中的Make menuconfig。
