@@ -49,6 +49,10 @@ int GetInput(unsigned int *index, unsigned int start, unsigned int end) {
 menu：菜单标题和菜单子项
 size：菜单子项的数量
 index：当前被选中的菜单项
+bckgcolor：背景色，数值参考 VT控制码 的颜色问题
+fregcolor：前景色
+tilcolor：标题颜色
+indexcolor：被选中的菜单项的颜色
 menu 从零开始计数,无标题的话 index 和 i 上界都要要减一，但我这里默认有标题*/
 void ShowMenu(const char **menu, unsigned int size, unsigned int index,
               unsigned int bckgcolor, unsigned int fregcolor,
