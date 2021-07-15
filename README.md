@@ -45,6 +45,9 @@ You input is:
  <-> 10
 ```
 
+### 程序
+- [v2-1](v2-1.c):现在知道了获取输入不用回车的办法，就可以写一个上下选择的菜单了
+
 # 参考
 - [C语言实现一个Window控制台带彩色，且可以用方向键选择并确认的菜单式列表(一)Engineer-Bruce_Yang 2017-08-22](https://yangyuanxin.blog.csdn.net/article/details/77485367)：这就是我想要的效果，看起来极像 GUI,但实际不是， IDF 中也有类似的菜单
   > 比如Linux内核中的Make menuconfig。
