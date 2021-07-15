@@ -32,30 +32,40 @@ int main() {
 
     // 输出菜单项供用户参考
     printf("\033[%dB\033[%dC", halfrow, halfcol); // 光标下移、右移动
-    printf("\033[47;32m   MENU SELECTION DEMO    \n");
+    printf("\033[47;32m"); // 背景色 47-白色，前景色（字体颜色） 32-绿色
+    printf("   MENU SELECTION DEMO    \n");
     printf("\033[%dC", halfcol); // 光标右移动
-    printf("\033[47;30m Options:                 \n");
+    printf("\033[47;30m"); // 背景色 47-白色，前景色（字体颜色） 30-黑色
+    printf(" Options:                 \n");
     printf("\033[%dC", halfcol); // 光标右移动
     if (index == 1) {
-      printf("\033[47;34m    --> 1. Option 1       \033[47;30m\n");
+      printf("\033[47;34m"); // 背景色 47-白色，前景色（字体颜色） 34-蓝色
+      printf("    --> 1. Option 1       \n");
+      printf("\033[47;30m");
     } else {
       printf("        1. Option 1       \n");
     }
     printf("\033[%dC", halfcol); // 光标右移动
     if (index == 2) {
-      printf("\033[47;34m    --> 2. Option 2       \033[47;30m\n");
+      printf("\033[47;34m");
+      printf("    --> 2. Option 2       \n");
+      printf("\033[47;30m");
     } else {
       printf("        2. Option 2       \n");
     }
     printf("\033[%dC", halfcol); // 光标右移动
     if (index == 3) {
-      printf("\033[47;34m    --> 3. Option 3       \033[47;30m\n");
+      printf("\033[47;34m");
+      printf("    --> 3. Option 3       \n");
+      printf("\033[47;30m");
     } else {
       printf("        3. Option 3       \n");
     }
     printf("\033[%dC", halfcol); // 光标右移动
     if (index == 4) {
-      printf("\033[47;34m    --> 4. Exit           \033[47;30m\n");
+      printf("\033[47;34m");
+      printf("    --> 4. Exit           \n");
+      printf("\033[47;30m");
     } else {
       printf("        4. Exit           \n");
     }
