@@ -13,33 +13,39 @@ int main() {
   char command;
   int index = 1; // 默认选项
 
-  system("stty -icanon"); //关闭缓冲区，输入字符无需按回车键直接接受
+  system("stty -icanon"); // 关闭缓冲区，输入字符无需按回车键直接接受
+  printf("\033[2J"); // 隐藏光标，实际效果有限。。
+  printf("\033[47;30m"); // 背景色 47-白色，前景色（字体颜色） 30-黑色
+  printf("\033[2J"); // 清空控制台，和 system("clear"); 效果还是有点区别的
+
   while (1) {
-    system("clear"); // 清空控制台
+    system("clear"); // 清空控制台 printf("\033[2J");
 
     // 输出菜单项供用户参考
-    printf("|\033[30;32m   MENU SELECTION DEMO    \033[0m|\n");
-    printf("| Options:                 |\n");
+    printf("\033[47;32m   MENU SELECTION DEMO    \n");
+    printf("\033[47;30m Options:                 \n");
     if (index == 1) {
-      printf("\033[47;34m|    --> 1. Option 1       |\033[0m\n");
+      printf("\033[47;34m    --> 1. Option 1       \033[47;30m\n");
     } else {
-      printf("|        1. Option 1       |\n");
+      printf("        1. Option 1       \n");
     }
     if (index == 2) {
-      printf("\033[47;34m|    --> 2. Option 2       |\033[0m\n");
+      printf("\033[47;34m    --> 2. Option 2       \033[47;30m\n");
     } else {
-      printf("|        2. Option 2       |\n");
+      printf("        2. Option 2       \n");
     }
     if (index == 3) {
-      printf("\033[47;34m|    --> 3. Option 3       |\033[0m\n");
+      printf("\033[47;34m    --> 3. Option 3       \033[47;30m\n");
     } else {
-      printf("|        3. Option 3       |\n");
+      printf("        3. Option 3       \n");
     }
     if (index == 4) {
-      printf("\033[47;34m|    --> 4. Exit           |\033[0m\n");
+      printf("\033[47;34m    --> 4. Exit           \033[47;30m\n");
     } else {
-      printf("|        4. Exit           |\n");
+      printf("        4. Exit           \n");
     }
+    printf("\033[15B"); // 光标下移 15行，
+                        // 尽管超出了显示范围，但它还是会显示在左下角
     // 让用户进行选择
     command = getchar();
     if (command == 10) { //  enter 10
@@ -54,6 +60,7 @@ int main() {
       }
     }
   }
+  printf("\033[0m"); // 取消前面的设置
   printf("You option is: %d\n", index);
   return 0;
 }
