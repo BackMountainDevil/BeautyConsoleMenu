@@ -50,7 +50,8 @@
 - [v2-2](v2-2.c)：给菜单加上颜色
   - [VT控制码. Engineer-Bruce_Yang 2016-02-21](https://blog.csdn.net/morixinguan/article/details/50710083)：很好的解释，但是看了不会用
   - [linux下控制台颜色输出. HES_C 2017-05-11](https://blog.csdn.net/HES_C/article/details/71600471):给出了一个 printf 案例，一下子就知道咋用了
-  
+- [v2-3](v2-3.c)：加上自适应居中
+
 # 参考
 - [C语言实现一个Window控制台带彩色，且可以用方向键选择并确认的菜单式列表(一)Engineer-Bruce_Yang 2017-08-22](https://yangyuanxin.blog.csdn.net/article/details/77485367)：这就是我想要的效果，看起来极像 GUI,但实际不是， IDF 中也有类似的菜单
   > 比如Linux内核中的Make menuconfig。
