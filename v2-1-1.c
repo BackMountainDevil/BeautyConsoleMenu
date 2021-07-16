@@ -39,8 +39,6 @@ int GetInput(unsigned int *index, unsigned int start, unsigned int end) {
   case ENTER:
     return ENTER;
   }
-  // system("stty +icanon"); //
-  // 暂不清楚要不要加上这个，试验结果表明不加不影响 getchar scanf
   return command;
 }
 
