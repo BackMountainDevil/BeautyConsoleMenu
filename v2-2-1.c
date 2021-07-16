@@ -28,6 +28,7 @@ int GetInput(unsigned int *index, unsigned int start, unsigned int end) {
   system("stty -icanon"); // 关闭缓冲区，输入字符无需按回车键
   char command;
   command = getchar();
+  system("stty icanon"); // 恢复规范输入
   switch (command) {
   case UP:
     if (*index > start)

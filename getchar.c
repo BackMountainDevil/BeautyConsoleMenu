@@ -18,7 +18,7 @@ int main() {
     option = getchar();
     printf("You input is: %c <-> %d\n", option, option);
   }
-
+  // system("stty icanon"); // 恢复规范输入
   return 0;
 }
 

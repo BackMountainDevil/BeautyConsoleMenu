@@ -38,6 +38,9 @@
   > linux中stty -echo是不显示输入内容的意思
 - [C语言中怎么使用户不用按回车键，输入字符后就直接调用函数.小-豪-豪 2020-01-17](https://blog.csdn.net/qq_39014877/article/details/104010727):这个使用getchar,但是不用回车，但是会显示，这个可以使用 clear 解决
   > system("stty -icanon");//关闭缓冲区，输入字符无需按回车键直接接受
+- [stty 命令说明及使用讲解. Alan0521 2012-05-20](https://blog.csdn.net/alan0521/article/details/7584932)
+  > icanon	启用规范输入（规范输入允许使用 ERASE 和 KILL 字符进行输入行的编辑）。  
+  -icanon	禁用规范输入。
 
 ### [getchar](getchar.c)
 为了探究为什么 [getch-linux](getch-linux.c) 中方向键、回车键等获取的值是多个而且均与 [getch-win](getch-win.c)中的不同，用[getchar](getchar.c)试了一下发现方向键输入的时候真的是一次输入了三个字符，而且其中前两个是一样的，第三个则和大写字母一样。。。也就是说用这两函数分辨这几个按键有点头大。
@@ -70,3 +73,5 @@
   我们可以看到像下面这样的GUI菜单式界面，这样的界面用Linux VT100控制码结合C语言是很容易就可以实现出来的。
 - [Shang / SimpleMenu ](https://gitee.com/shangcode_happy/SimpleMenu)：无预览，无说明，无法鉴别效果
   > 用C语言写的一个运行在Windows控制台内的菜单。
+- [拜托不要再用system("pause")和void main了. stereoMatching. 2012-10-01](https://bbs.csdn.net/topics/390231844)：一个 getchar() 可能不行，那就来两个
+  > 不要用system("pause")来暂停，可以改用std::cin.get或getchar()

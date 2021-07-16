@@ -25,6 +25,7 @@ int main() {
       printf("Unknown option: %d. Please select again: ", option);
     }
   } while (option < 1 || option > 4);
-
+  getchar(); //   模拟暂停效果，一个不够，两个刚好
+  getchar(); // 估计第一个默默接收了上面输入的回车，第二个才起到了真正的效果
   return 0;
 }
