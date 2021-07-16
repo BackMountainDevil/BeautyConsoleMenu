@@ -54,6 +54,7 @@
   前景色（字体颜色）：30:黑，31:红，32:绿，33:黄，34:蓝色，35:紫色，36:深绿，37:白色
 
 ### 程序
+目前代码都是在 Linux 平台试验通过，暂时不兼容 Windows 平台
 - [v2-1](v2-1.c):现在知道了获取输入不用回车的办法，就可以写一个上下选择的菜单了
 - [v2-2](v2-2.c)：给菜单加上颜色
   - [VT控制码. Engineer-Bruce_Yang 2016-02-21](https://blog.csdn.net/morixinguan/article/details/50710083)：很好的解释，但是看了不会用
@@ -61,13 +62,11 @@
 - [v2-3](v2-3.c)：加上自适应居中
 - [v2-1-1](v2-1-1.c)：对 v2-1.c 进行函数封装
 - [v2-2-1](v2-2-1.c)：对 v2-2.c 进行函数封装
+- [v2](v2.c):对 v2-3.c 进行函数封装，方便快速复用
 
 # 参考
 - [C语言实现一个Window控制台带彩色，且可以用方向键选择并确认的菜单式列表(一)Engineer-Bruce_Yang 2017-08-22](https://yangyuanxin.blog.csdn.net/article/details/77485367)：这就是我想要的效果，看起来极像 GUI,但实际不是， IDF 中也有类似的菜单
   > 比如Linux内核中的Make menuconfig。
   我们可以看到像下面这样的GUI菜单式界面，这样的界面用Linux VT100控制码结合C语言是很容易就可以实现出来的。
-- [Java I/O - 如何创建控制台菜单](https://www.w3cschool.cn/java/codedemo-484048230.html):最基本的菜单
-- [漂亮的C++控制台界面（格式化输入输出）慕宵子 2015-07-03](https://blog.csdn.net/u011134502/article/details/46746823);无预览图，比 print 多了点居中，谈不上漂亮
-  > 现在呢，它不仅可以格式化输出，还可以格式化输入，并且可以根据数据的长度自由控制表格的宽度，标题和表格都是居中显示的。但是，它也有一些缺点，就是如果数据过于长且超过窗口的最大宽度，它会乱行吐舌头
 - [Shang / SimpleMenu ](https://gitee.com/shangcode_happy/SimpleMenu)：无预览，无说明，无法鉴别效果
   > 用C语言写的一个运行在Windows控制台内的菜单。
